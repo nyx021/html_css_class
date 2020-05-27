@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The Head portion of the document is the instructions,
+    SEO, and info that the browswer (chrome, firefox, safari)
+    need.-->
+    <meta charset="UTF-8">
+    <!-- UTF-8 is the character set for English. Other Languages 
+    require other charsets. This is an ATTRIBUTE or a 
+    NAME / VALUE Pair ie: name = "value" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Class Experiments</title>
+</head>
+<body>
+    <!--Content. The body portion of HTML code is for all the content that
+    the human will see displayed on the web browswer--> 
+    <h1>My Grocery List</h1>
+    <ul>
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Bread
+            <ul> <!--If the ordering of your list doesn't matter, use an <ol> (ordered [numbered] list) if it doesn't use <ul>-->
+                <li>Franz Bread</li>
+                <li>Sara Lee Bread</li>
+                <li>Thomas Brand</li>
+            </ul>
+        </li>
+    </ul>
+    <h1>Example Homepage & Page Link</h1>
+    <p>Welcome to the homepage. Here is a link to my <a href=favorite-colors.html>favorite colors</a></p>
+    <h1>Music</h1>
+    <p>For the sake of this tutorial, I play ukulele. Here is a clip as proof.</p>
+    <audio controls>
+        <source src="audio/ukulele.mp3" type="audio/mpeg">
+        <source src="audio/ukulele.ogg" type="audio/ogg">
+        <a href="audio/ukulele.mp3"> Ukulele audio recording</a>
+        <!--"Audio Controls" is how you make a control bar that could play audio. This will show up even in an audio file isn't uploaded.
+        Most newer browswers support .mp3, but some still need .ogg in order to run the audio clip. By keeping things in line like this, 
+        you make it so that the browser can chose which file to load because it will know what it can use. As a last ditch effort, include 
+        an anchor tagged link to the file so that even older browsers and users can access the file.-->
+    </audio>
+    <h1>Photos</h1>
+    <img src="images/Man and his Tux Blurred.jpg" alt= "Man and his tuxedo cat." height=900px>
+    <img src="../Man and his Tux Blurred.jpg" alt="Suddenly, you work?" height="900px">
+    <Div>
+        <img src="chinesegarden.jpg" alt="Chinese Garden" width="1300px">
+    </Div>
+    <h1>Video Files and Example</h1>
+    <video controls>
+        <source src="video/video/example.mp4" type="video/mp4"> <!--Works with Chrome-->
+        <source src="video/video/example.webm" type="video/webm"> <!--this works with firefox-->
+        <source src="video/video/example.ogv" type="video/ogg"> <!--This is just to cover all bases.-->
+        Your browser is outdated and does not support HTML Video. <!--This is fallback text in case the browser relies on Adobe Flash in order to run a video-->
+    </video>
+    <p>However, in the real world, Video support is more complicated.</p>
+    <ul>
+        <li><strong>Older Browser Support</strong>. For older browsers, you should really have Adobe Flash fallback support but that isn't covered in this class.</li>
+        <li><strong>Video Resolution</strong>. How do you make sure that viewers who have slower video speed can still watch the content? Ideally, you would have a one, or two, or both of these solutions: </li>
+        <ul>
+            <li>You would have something that automatically detects the user's internet speed, and adjust the video resolution accordingly.</li>
+            <li>Have some level of resolution picker so that the user can select the file size they would like.</li>
+        </ul>
+        <li><strong>Custom Branding</strong> What if you want to control how the pause or play buttons look and function? You would have to use JavaScript in order to override the HTML controler. Again, not covered in this class. </li>
+    </ul>
+    <p>All of these issues have the same issue and solution: <strong>They are outside the scope of basic HTML programming</strong> Without JS, you would be better off <br>
+    using a third party video service. </p>
+    <h1>Lists and All Their Glory</h1>
+    <p>
+        There are lists, and the most basic is an ordered list and unordered list. Basically, when the order doesn't matter, or when bullet points are okay, use an <strong>unordered list, or &lt;ul&gt;</strong>. If the sequence matters, then use an <strong>ordered list, or &lt;ol&gt;.</strong>  BUT there is a third option... 
+    </p>
+    <h2>Descriptive Lists</h2>
+    <p>Here is an example of a descriptive list:</p>
+    <dl> <!--seem cool, but might mess up screen readers and make for unaccessible website-->
+        <dt>Title:</dt><!--This is the beginning of a pairing of a term and a description-->
+        <dd>An Imaginary Book Title</dd><!--you are not limited to 1 DD, you can have multiple.-->
+        <dt>Author:</dt>
+        <dd>Brad Schiff (the instructor)</dd>
+        <dt>Number of Pages:</dt>
+        <dd>500 pages.</dd>
+    </dl>
+    <h1>Special Characters</h1>
+    <p>In HTML you don't want to print symbols to the screen if you want them to display as content.
+        I actually just ran into this when writting up the description of different lists above. All of
+        the symbols are things you would use in the code, and it confuses the compiler and is bad practice.
+        Instead, use the following codes:
+        <ul>
+            <li>Right single quote: &rsquo;</li> <!--note that all codes are sandwiched between & and ;-->
+            <li>Left single quote: &lsquo;</li>
+            <li>Right doble quote: &rdquo;</li>
+            <li>Ampersands: &amp;</li>
+            <li>Greater than: &gt;</li>
+            <li>Less than: &lt;</li>
+            <li>Copyright: &copy;</li>
+            <li>Registered symbol: &reg;</li>
+            <li>Trademark symbol: &trade; </li>
+        </ul>
+    </p>
+    <h1>Structural Elements</h1>
+    <p>For a look at the structural elements, please go to the <a href="before.html">before page</a> and then take a look at the <a href="after.html">after page</a>. All notes will be on the after page.</p>
+</body>
+</html>
