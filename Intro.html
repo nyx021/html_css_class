@@ -97,5 +97,50 @@
     </p>
     <h1>Structural Elements</h1>
     <p>For a look at the structural elements, please go to the <a href="before.html">before page</a> and then take a look at the <a href="after.html">after page</a>. All notes will be on the after page.</p>
+   
+    <form>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" name="firstName">
+
+        <label> Last Name:
+            <input id="lastName" type="text" name="lastName">
+        </label>
+            <!--There are two ways of handling labels. First, you can have "for" and "id" pairs, or you can have the input put inside the label element. However the second things is not accesible because it messes up screen readers.-->
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email">
+            <!--making it an email doesn't just make it so that the web browser validates the user
+            input, but it controls the keyboard that pops up on tablets and mobile devices. It will
+            make it so that they have the @ sign as an option.-->
+        <label type="tel">Telephone Number</label>
+        <input id="telephone" type="tel" name="telephone">
+
+        <input type="submit" value="submit">
+        <label for="yourMessage">Your message:</label>
+        <textarea id="yourMessage" name="yourMessage"> </textarea>
+    </form> 
+
+    <label for="favoriteColor">What is your favorite color?</label>
+    <select id="favoriteColor" name="favoriteColor">
+        <option value="colorRed">Red</option>
+        <option value="colorOrange">Orange</option>
+        <option value="colorBlue">Blue</option>
+        <option value="colorBlack">Black</option>
+        <option value="colorPurple">Purple</option>
+    </select>
+
+    <fieldset>
+        <legend>What is your favorite meal?</legend>
+        <input type="radio" id="breakfast" name="favMeal" value="meal1"><label for="breakfast">Breakfast</label>
+        <input type="radio" id="lunch" name="favMeal" value="meal2"><label for="lunch">Lunch</label>
+        <input type="radio" id="dinner" name="favMeal" value="meal3"><label for="dinner">Dinner</label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Which meals do you enjoy? <span class="instructions">Check all that apply.</span></legend>
+        <input type="checkbox" id="breakfast" name="favMeal" value="meal1"><label for="breakfast">Breakfast</label>
+        <input type="checkbox" id="lunch" name="favMeal" value="meal2"><label for="lunch">Lunch</label>
+        <input type="checkbox" id="dinner" name="favMeal" value="meal3"><label for="dinner">Dinner</label>
+    </fieldset>
+
 </body>
 </html>
